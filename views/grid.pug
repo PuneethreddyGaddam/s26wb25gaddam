@@ -37,22 +37,4 @@ html(lang="en")
       }
   body
     .container.py-5
-      h1.mb-2 Inventory Reducer
-      p.lead.text-secondary.mb-4 Tap the button to subtract a fixed amount and see the updated total.
-      button(type="button", class="btn pill-btn mb-4", onclick="reduce()") Reduce Quantity
-      div(id="use", class="use-text mt-2") take some away
-      a(href="/yurtcampsites") View Yurt Campsites Results
-  script.
-    let current = 11;
-    let quantity = 2;
-
-    function reduce() {
-      current -= quantity;
-      if (current < 0) {
-        current = 0;
-      }
-      const useDiv = document.getElementById('use');
-      if (useDiv) {
-        useDiv.textContent = `Reduced by ${quantity} to ${current}`;
-      }
-    }
+      h1= title

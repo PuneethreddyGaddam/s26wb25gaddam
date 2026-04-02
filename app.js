@@ -6,6 +6,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var yurtCampsitesRouter = require('./routes/yurtcampsites');
+var gridRouter = require('./routes/grid');
 
 var app = express();
 
@@ -21,5 +22,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/yurtcampsites', yurtCampsitesRouter);
+app.use('/grid', gridRouter);
 
 module.exports = app;

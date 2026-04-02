@@ -7,6 +7,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var yurtCampsitesRouter = require('./routes/yurtcampsites');
 var gridRouter = require('./routes/grid');
+var pickRouter = require('./routes/pick');
 
 var app = express();
 
@@ -23,5 +24,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/yurtcampsites', yurtCampsitesRouter);
 app.use('/grid', gridRouter);
+app.use('/selector', pickRouter);
 
 module.exports = app;
